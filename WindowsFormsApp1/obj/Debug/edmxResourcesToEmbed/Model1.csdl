@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PostirkaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Лист1_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Наименование_услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Количество" Type="Double" />
+    <Property Name="Цена" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Лист1_Staff">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Фамилия" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Имя" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Отчество" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Логин" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Пароль" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Роль" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="PostirkaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Лист1_" EntityType="Self.Лист1_" />
+    <EntitySet Name="Лист1_Staff" EntityType="Self.Лист1_Staff" />
+  </EntityContainer>
+</Schema>
